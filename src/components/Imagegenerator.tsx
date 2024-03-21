@@ -1,13 +1,15 @@
 import React, { useState, useRef } from "react";
 import letraf from "../assets/letraf.jpeg";
-
 import "./imagegenerator.css";
 
-const API_KEY = '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'
 const Imagegenerator = () => {
+  
+  
+  
   const [image_url, setImage_url] = useState("/");
   const [loading, setLoading] = useState(false);
-
+  
+  
   let inputRef = useRef(null);
   const imageGenerator = async () => {
     if (inputRef.current.value === "") {
@@ -20,7 +22,7 @@ const Imagegenerator = () => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: 'Bearer ' + API_KEY,
+          Authorization: "Bearer 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" ,
           "User-Agent": "Chrome",
         },
         body: JSON.stringify({
