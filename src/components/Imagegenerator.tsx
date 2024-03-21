@@ -1,9 +1,12 @@
 import React, { useState, useRef } from "react";
 import letraf from "../assets/letraf.jpeg";
+
 import "./imagegenerator.css";
+
+const API_KEY = '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'
 const Imagegenerator = () => {
   const [image_url, setImage_url] = useState("/");
-  const [loading,setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   let inputRef = useRef(null);
   const imageGenerator = async () => {
@@ -17,8 +20,7 @@ const Imagegenerator = () => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization:
-            "Bearer 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",
+          Authorization: 'Bearer ' + API_KEY,
           "User-Agent": "Chrome",
         },
         body: JSON.stringify({
@@ -37,13 +39,15 @@ const Imagegenerator = () => {
   return (
     <div className="ai-image-generator">
       <div className="header">
-        Ai Generador <span>Imagen</span>
+        IA Generador de <span>Imagenes</span>
         <div className="img-loading">
           <div className="image">
             <img src={image_url === "/" ? letraf : image_url} alt="" />
             <div className="loading">
-              <div className={loading?"loading-bar-full":"loading-bar" }>
-                <div className={loading? "loading-text":"display-none"}>Cargando...</div>
+              <div className={loading ? "loading-bar-full" : "loading-bar"}>
+                <div className={loading ? "loading-text" : "display-none"}>
+                  Cargando...
+                </div>
               </div>
             </div>
           </div>

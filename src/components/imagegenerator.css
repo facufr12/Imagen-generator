@@ -35,18 +35,19 @@
 
 .search-box {
   display: flex;
+  bottom: 15px;
   width: 1000px;
   position: relative; /* Asegúrate de que el buscador esté posicionado correctamente */
   z-index: 1; /* Coloca el buscador por encima del fondo animado */
-  height: 95px;
+  height: 85px;
   justify-content: space-around;
-  align-items: center;
+  align-items: en;
   border-radius: 50px;
   background: gray;
 }
 
 .search-input {
-  width: 600px;
+  width:650px;
   height: 70px;
   background: transparent;
   border: none;
@@ -55,6 +56,7 @@
   color: rgb(14, 14, 14);
   padding-left: 35px;
   margin-right: 35px;
+  
 }
 
 .generate-btn {
@@ -71,8 +73,9 @@
 
 .loading-bar {
   width: 0px;
-  height: 8px;
+  height: 5px;
   background-color: blueviolet;
+
 }
 
 .loading-text {
@@ -82,7 +85,7 @@
 
 .loading-bar-full {
   align-items: center;
-  width: 512px;
+  width: 790px;
   height: 8px;
   background-color: blueviolet;
   transition: 15s;
