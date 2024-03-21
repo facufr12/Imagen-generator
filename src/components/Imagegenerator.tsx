@@ -4,9 +4,6 @@ import "./imagegenerator.css";
 import.meta.env.VITE_MY_API_KEY;
 const apiKey = import.meta.env.VITE_MY_API_KEY;
 
-
-
-
 const Imagegenerator = () => {
   const [image_url, setImage_url] = useState("/");
   const [loading, setLoading] = useState(false);
@@ -23,13 +20,13 @@ const Imagegenerator = () => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: "Bearer " + apiKey   ,
+          Authorization: "Bearer " + apiKey,
           "User-Agent": "Chrome",
         },
         body: JSON.stringify({
           prompt: `${inputRef.current.value}`,
           n: 1,
-          size: "512x512",
+          size: "1024x1024",
         }),
       }
     );
